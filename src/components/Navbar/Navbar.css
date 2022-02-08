@@ -1,0 +1,29 @@
+.NavBar {
+    display: flex;
+    background: transparent;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    background: wheat;
+}
+
+.Categories {
+    display:flex;
+    justify-content: space-around;
+    align-items: center
+}
+
+.Option {
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 30px;
+    width: auto;
+    padding: 12px;
+    font-size: 12px;
+    cursor: pointer;
+
+}
+
+.Option:active {
+    transform: scale(0.9);
+}
