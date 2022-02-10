@@ -1,26 +1,22 @@
 import './Navbar.css'
+import Button from '../Button/Button'
 
-const NavBar = () => {
+const NavBar = ({ title, ...rest }) => {
+
     return (
       <nav className="NavBar">
-          <div>
-            <p><b>Torontel</b></p>    
+          <div className="Categories">
+            <h3 >{title}</h3>    
           </div>
-        <button className="Option">Inicio</button>
-        <div>
-            <p className="Option">Vinos Argentinos</p>   
-        </div>
-        <div>
-            <p className="Option">Vinos Españoles</p>    
-        </div>
-        <div>
-            <p className="Option">Rones</p>    
-        </div>
                    
-        <button className="Option">Login</button>
+          <div className="Categories">
+            <Button label='Vinos Argentinos' colorText='black' />
+            <Button label='Vinos Españoles' />
+            <Button label='Rones' />
+          </div>
       </nav>
   
     )
-  }
+}
 
-  export default NavBar
+export default NavBar

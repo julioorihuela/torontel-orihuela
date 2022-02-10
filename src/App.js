@@ -4,7 +4,7 @@ import NavBar from './components/Navbar/NavBar';
 function App() {
   return (
     <div className="App">
-      <NavBar />
+      <NavBar title='Torontel' color='blue' />
     </div>
   );
 }
