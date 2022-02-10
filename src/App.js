@@ -1,11 +1,12 @@
 import './App.css';
 import NavBar from './components/Navbar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App">
-      <NavBar title='Torontel' color='blue' />
-      <ItemListContainer greeting="Torontel" />
+      <NavBar title='Torontel' />
+      <ItemListContainer greeting="Bienvenid@s!" />
     </div>
   );
 }
