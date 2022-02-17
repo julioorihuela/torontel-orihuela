@@ -6,7 +6,10 @@ import ItemCount from './components/ItemCount/ItemCount';
 function App() {
   return (
     <div className="App">
-      <NavBar title='Torontel' />
+      <div>
+        <NavBar title='Torontel' />
+      </div>
+            
       <ItemListContainer greeting="Bienvenid@s!" />
       <ItemCount />
     </div>

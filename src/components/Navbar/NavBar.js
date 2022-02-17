@@ -1,8 +1,8 @@
-import './Navbar.css'
-import Button from '../Button/Button'
-import CartWidget from '../CartWidget/CartWidget'
+import './Navbar.css';
+import Button from '../Button/Button';
+import CartWidget from '../CartWidget/CartWidget';
 
-const NavBar = ({ title, ...rest }) => {
+const NavBar = ({ title}) => {
 
     return (
       <nav className="NavBar">
