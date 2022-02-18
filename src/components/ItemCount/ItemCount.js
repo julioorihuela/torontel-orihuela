@@ -1,46 +1,37 @@
-import {Component} from "react";
+import { useState } from 'react'
 
-// onAdd
-// const ItemCount ({ stock, initial, OnAdd })  {
-const stock = 10
+const ItemCount = ({stock=1, initial=1, onAdd}) => {
 
-class ItemCount extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { count:1 }
-    }
 
-increment = () => {
-    if (this.state.count<stock) {       
-        this.setState({  
-            count: this.state.count + 1 
-        })
-    } 
-}
+    const [quantity, setQuantity] = useState(initial)
 
-decrement = () => {
-    if (this.state.count>1) {
-        this.setState({  
-            count: this.state.count - 1 
-        })
-    }   
-}
+    const increment = () => {
+        if (quantity<stock) {       
+            setQuantity (quantity+1) 
+            }
+        } 
 
-render () {
+    const decrement = () => {
+         if (quantity>0) {       
+            setQuantity (quantity-1) 
+            }
+        } 
+
     return(
         <>
             <h2>Counter</h2>
-            <h2>{this.state.count}</h2>
-            <button onClick={this.decrement}>-</button>
-            <button onClick={this.increment}>+</button>
+            <h2>{quantity}</h2>
+            <button onClick={ () => decrement() } > - </button>
+            <button onClick={ () => increment() } > + </button>
             <p />
-            <button onClick={console.log(this.state.count)}>Agregar al carrito</button>
-
+            <button onClick={ () => onAdd(quantity)}>Agregar al carrito</button>
+            <p />
+            <p />
         </>
-)
+    )
              
-}
+
 }
 
-// poner luego: () => onAdd(this.state.count)
+
 export default ItemCount
