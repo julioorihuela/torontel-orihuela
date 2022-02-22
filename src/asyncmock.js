@@ -26,21 +26,17 @@ const products = [
     }
 ]
 
-/*
-const getProducts = () => { 
-    return new Promise ((resolve, reject) => {
-        if(onSuccess) {
-            setTimeout( () => resolve ( products), 3000 )
-        }  else { 
-            setTimeout( () => reject('No hay respuesta'), 2000 )
-        }
-    })
-} */
-    
-
+// devuelve array con todos los productos
 export const getProducts = () => { 
     return new Promise ((resolve) => {        
             setTimeout( () => {resolve (products)}, 2000 )
     })
 }
-    
+
+
+export const getProduct = (id) => { 
+    return new Promise ((resolve) => {   
+        const prod = products.find(p => p.id === id)
+        setTimeout( () => {resolve (prod)}, 2000 )
+    })
+}
