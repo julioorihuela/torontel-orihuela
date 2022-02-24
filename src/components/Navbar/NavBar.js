@@ -3,7 +3,7 @@ import './Navbar.css';
 import Button from '../Button/Button';
 import CartWidget from '../CartWidget/CartWidget';
 
-const NavBar = ({ title}) => {
+const NavBar = ({title}) => {   // {title}
 
     return (
       <nav className="NavBar">
@@ -12,6 +12,7 @@ const NavBar = ({ title}) => {
           </div>
                    
           <div className="Categories">
+            <h3>Torontel</h3>
             <Button label='Vinos Argentinos' />
             <Button label='Vinos Españoles' />
             <Button label='Rones' />

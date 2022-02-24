@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount'
+//import ItemCount from '../ItemCount/ItemCount'
 import ItemList from '../ItemList/ItemList'
 import { getProducts } from '../../asyncmock'
 
@@ -10,7 +10,7 @@ const ItemListContainer = ({greeting}) => {
     const [products, setProducts] = useState([])
 
     useEffect( () =>  {
-        getProducts().then(products => {  
+        getProducts().then( products => {  
             console.log(products)
             setProducts(products)
      })
@@ -18,7 +18,10 @@ const ItemListContainer = ({greeting}) => {
                         console.log(error)
 
                     })
-
+                    return (() => {
+                        setProducts()
+                    
+                    } )
 
     }, [] )
 
@@ -30,8 +33,8 @@ const ItemListContainer = ({greeting}) => {
 
     return (       
         <div className="ItemListContainer">
-            <h2>{greeting}</h2>
-            <ItemCount stock={10} initial={2} onAdd={handleOnAdd}/> 
+            {/* <h2>{greeting}</h2> */}
+            {/* <ItemCount stock={10} initial={2} onAdd={handleOnAdd}/>  */}
             <ItemList products={products}/>
         </div>        
     )

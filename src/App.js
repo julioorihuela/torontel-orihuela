@@ -7,11 +7,10 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 function App() {
   return (
     <div className="App">
-      <div>
-        <NavBar title='Torontel' />
-      </div>            
-      <ItemListContainer greeting="Bienvenid@s!" /> 
-      <ItemDetailContainer />     
+{/* title='Torontel' */}
+      <NavBar />    
+      <ItemListContainer /> 
+      {/* <ItemDetailContainer /> */}
     </div>
   );
 }

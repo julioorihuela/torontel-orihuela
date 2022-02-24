@@ -1,14 +1,20 @@
+//import {Link} from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail';
 import './Item.css';
+//import ItemCount from '../ItemCount/ItemCount';
 
 const Item = ({product}) => {
     return (
-        <div style={{display: 'flex', flexDirection: 'column', border: '1px solid black', margin: '10px'}}>            <img src={product.img} width="150px" alt={product.name}/>  
-        <h2>{product.name}</h2>
-        <h3>Stock: {product.stock}</h3>
-        <h3>Precio: {product.price}</h3>
-
-        <button onClick={() => ItemDetail}>Ver Detalle</button>
+        <div style={{display: 'flex', flexDirection: 'column', border: '1px solid black', margin: '10px'}}>    
+            <div className="CardItem">
+                <img src={product.img} width="80px" alt={product.name}/>  
+                <h2>{product.name}</h2>
+                <p>Stock: {product.stock}</p>
+                <p>Precio: {product.price} US$</p>
+                {/* <ItemCount />  */}
+                <button onClick={() => ItemDetail}>Ver Detalle</button>
+                {/* <Link to = {`/detail/${product.id}`}>Ver Detalle</Link>  */}
+            </div>        
         </div>
     );
 };
