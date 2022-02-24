@@ -8,11 +8,10 @@ const NavBar = ({title}) => {   // {title}
     return (
       <nav className="NavBar">
           <div className="Categories">
-            <h3>{title}</h3>    
+            <h3>Torontel</h3>    
           </div>
                    
           <div className="Categories">
-            <h3>Torontel</h3>
             <Button label='Vinos Argentinos' />
             <Button label='Vinos Españoles' />
             <Button label='Rones' />

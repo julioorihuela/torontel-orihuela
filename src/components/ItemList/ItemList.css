@@ -1,0 +1,11 @@
+.ListGroup {
+    display: flex;
+    flex-direction: row;
+    justify-Content: center;
+    align-Items: center;
+}
+.Info {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+}

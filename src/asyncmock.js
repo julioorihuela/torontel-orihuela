@@ -54,6 +54,12 @@ export const products = [
         img: 'https://dsg.pe/coder/lan.png'
     }
 ]
+const categories = [
+    {id: 'vinos_a', description: 'Vinos Argentinos'},
+    {id: 'vinos_e', description: 'Vinos Españoles'},
+    {id: 'rones', description: 'Rones '}
+
+]
 
 // devuelve array con todos los productos
 export const getProducts = () => { 
@@ -67,5 +73,13 @@ export const getProduct = (id) => {
     return new Promise ((resolve) => {   
         const prod = products.find(p => p.id === id)
         setTimeout( () => {resolve (prod)}, 2000 )
+    })
+}
+
+export const getCategories =  () => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(categories)
+        }, 1000)
     })
 }

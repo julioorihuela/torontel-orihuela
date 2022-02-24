@@ -1,18 +1,16 @@
 import Item from '../Item/Item'
+import './ItemList.css'
 
 const ItemList = ({products}) =>  {
 
     return (
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div className="ListGroup">
             {products.map(  (product) => 
-                            (<Item product={product} key={product.id} />)
-              
-                         )
-            
+                            (<Item product={product} key={product.id} />)             
+                         )           
             }
-
         </div>
     )
-    }
+}
 
 export default ItemList
