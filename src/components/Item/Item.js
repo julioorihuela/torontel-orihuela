@@ -7,7 +7,7 @@ const Item = ({product}) => {
     return (
         <div style={{display: 'flex', flexDirection: 'column', border: '1px solid black', margin: '10px'}}>    
             <div className="CardItem">
-                <img src={product.img} width="80px" alt={product.name}/>  
+                <img src={product.img} width="60px" alt={product.name}/>  
                 <h2>{product.name}</h2>
                 <p>Stock: {product.stock}</p>
                 <p>Precio: {product.price} US$</p>
