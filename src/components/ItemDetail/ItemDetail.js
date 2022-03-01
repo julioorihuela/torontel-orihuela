@@ -15,9 +15,11 @@ const ItemDetail = ({product}) => {
     //     </div>                    
     //     )}, 2000 )
 
+// agregar el onAdd
+
     return (
         <div>
-            <h1>{product?.name}</h1>
+            <h2>{product?.name}</h1>
             {/* <img src={product.img} /> */}
             <h2>{product?.price}</h2>
             <button>Agregar</button> 
