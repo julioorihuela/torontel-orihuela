@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
 {/* title='Torontel' */}
-      <NavBar />    
+      <NavBar title='Torontel'/>    
       <ItemListContainer /> 
       {/* <ItemDetailContainer /> */}
     </div>

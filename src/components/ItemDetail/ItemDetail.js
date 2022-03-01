@@ -1,5 +1,6 @@
 import React from 'react';
 import ItemCount from '../ItemCount/ItemCount';
+//import './ItemDetail.css'
 
 const ItemDetail = ({product}) => {
     // console.log( product.name ); 
@@ -16,9 +17,9 @@ const ItemDetail = ({product}) => {
 
     return (
         <div>
-            <h1>{product.name}</h1>
+            <h1>{product?.name}</h1>
             {/* <img src={product.img} /> */}
-            <h2>{product.price}</h2>
+            <h2>{product?.price}</h2>
             <button>Agregar</button> 
             <ItemCount />
         </div>

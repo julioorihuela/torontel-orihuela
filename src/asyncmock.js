@@ -68,7 +68,7 @@ export const getProducts = () => {
     })
 }
 
-
+// devuelve producto con id id
 export const getProduct = (id) => { 
     return new Promise ((resolve) => {   
         const prod = products.find(p => p.id === id)

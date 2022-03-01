@@ -12,9 +12,10 @@ const NavBar = ({title}) => {   // {title}
           </div>
                    
           <div className="Categories">
+            <Button label='Inicio' />
             <Button label='Vinos Argentinos' />
             <Button label='Vinos Españoles' />
-            <Button label='Rones' />
+            <Button label='Contacto' />
           </div>
           <CartWidget />
       </nav>

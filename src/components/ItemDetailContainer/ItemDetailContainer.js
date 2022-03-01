@@ -2,25 +2,25 @@ import { useState, useEffect } from 'react'
 import { getProduct } from '../../asyncmock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import './ItemDetailContainer.css'
+import { useParams } from 'react-router-dom'
 
 //llamar a un asynmock con promise en 2 segundos devuelve un item
 
-const ItemDetailContainer = ({ id }) => {
-    const [product, setProduct] = useState([])
+const ItemDetailContainer = () => {
+    const [product, setProduct] = useState()
+    const {productId} = useParams();
 
     useEffect(() => {
-        getProduct(id)
+        getProduct(productId)
             .then((item) => { setProduct(item) })
             .catch(err  => { console.log(err) })
 
-        return (() => {
-            setProduct()
-        })
-    }, [id])
+        return (() => {  setProduct()   })
+    }, [productId])
 
 return (
-    <div>
-    <ItemDetail product = {product} />
+    <div className="ItemDetailContainer">
+        <ItemDetail product = {product} />
     </div>
     )
 }

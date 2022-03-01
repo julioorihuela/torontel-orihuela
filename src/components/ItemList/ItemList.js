@@ -6,11 +6,12 @@ const ItemList = ({products}) =>  {
     return (
         <div className="ListGroup">
             {products.map(  (product) => 
-                            (<Item product={product} key={product.id} />)             
+                            (<Item key={product.id} product={product}/>)             
                          )           
             }
         </div>
     )
+    
 }
 
 export default ItemList
