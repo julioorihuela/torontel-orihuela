@@ -1,21 +1,32 @@
-import React from 'react';
+import { useEffect,useState } from 'react';
 import './Navbar.css';
 import Button from '../Button/Button';
 import CartWidget from '../CartWidget/CartWidget';
+import {Link, NavLink} from 'react-router-dom';
+import { getCategories } from '../../asyncmock'
 
-const NavBar = ({title}) => {   // {title}
+const NavBar = () => {   
+  const [categories, setCategories] = useState([])
+
+  useEffect( () => {
+    getCategories().then(categories => {
+      setCategories(categories)
+    })
+  }, [])
 
     return (
       <nav className="NavBar">
-          <div className="Categories">
+
+
+
+          <Link to={'/'}>
             <h3>Torontel</h3>    
-          </div>
+          </Link>
                    
           <div className="Categories">
-            <Button label='Inicio' />
-            <Button label='Vinos Argentinos' />
-            <Button label='Vinos Españoles' />
-            <Button label='Contacto' />
+            {categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className={({ isActive }) =>
+              isActive ? 'ActiveOption' : 'Option'
+            }>{cat.description}</NavLink>)}
           </div>
           <CartWidget />
       </nav>

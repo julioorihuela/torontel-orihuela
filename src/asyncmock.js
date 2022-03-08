@@ -68,18 +68,16 @@ export const getProducts = () => {
     })
 }
 
-// devuelve producto con id id
+// devuelve producto con id , uno solo
 export const getProduct = (id) => { 
     return new Promise ((resolve) => {   
-        const prod = products.find(p => p.id === id)
+        const prod = products.find(p => p.id === parseInt(id))
         setTimeout( () => {resolve (prod)}, 2000 )
     })
 }
 
 export const getCategories =  () => {
     return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(categories)
-        }, 1000)
+        setTimeout(() => { resolve(categories) }, 1000)
     })
 }
