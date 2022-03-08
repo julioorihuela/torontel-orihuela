@@ -57,7 +57,7 @@ export const products = [
 const categories = [
     {id: 'vinos_a', description: 'Vinos Argentinos'},
     {id: 'vinos_e', description: 'Vinos Españoles'},
-    {id: 'rones', description: 'Rones '}
+    {id: 'vinos_c', description: 'Vinos Californianos'}
 
 ]
 
